@@ -7,7 +7,7 @@ function Header() {
     return (
         <header>
             {/* ***************************************************************  LOGO */}
-            <a href="#">
+            <a href="/#">
                 <div className="logo">
                     <img src={ Logo } alt="Logo" width="150"/>
                 </div>
@@ -15,10 +15,10 @@ function Header() {
             {/* ***************************************************************  MENU */}
             <ul>
                 <li>
-                    <a href="#">Home</a>
+                    <a href="/#">Home</a>
                 </li>
                 <li>
-                    <a href="#">Products</a>
+                    <a href="/#">Products</a>
                 </li>
             </ul>
             {/* ***************************************************************  SHOPPING CART */}
