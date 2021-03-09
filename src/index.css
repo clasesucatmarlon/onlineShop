@@ -12,9 +12,18 @@ code {
 
 /*  ----------------------------------- INITIAL VALUES -------------------------------------------------  */
 
+/* html { 
+   overflow: scroll;
+   overflow-y: hidden; 
+} */
+
+::-webkit-scrollbar {
+   display: none;
+}
+
 :root {
    --color-primary-green: #08a05c;
-   --color-primary-green-opacity50: #0d744559;
+   --color-primary-green-opacity: #42b48185;
    --color-white: white;
    --color-black: black;
    --color-red: red;
@@ -40,6 +49,30 @@ code {
    padding: 0 15px;
    box-sizing: border-box;
 }
+
+.app::-webkit-scrollbar {
+   width: 8px;     /* Tamaño del scroll en vertical */
+   height: 8px;    /* Tamaño del scroll en horizontal */
+   display: none;  /* Ocultar scroll */
+}
+
+/*  ----------------------------------- STYLES FOR HOME -------------------------------------------------  */
+.home {
+   width: 100%;
+   margin: 0 auto;
+   padding-top: 5.7rem;
+}
+
+.home h1 {
+   font-size: 2.5rem;
+   color: var(--color-primary-green)
+}
+
+.home img {
+   width: 100%;
+}
+
+
 
 /*  ----------------------------------- STYLES FOR HEADER -------------------------------------------------  */
 
@@ -130,7 +163,11 @@ header .cart span {
    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
    gap: 3rem 3rem;
    box-sizing: border-box;
+   /* overflow-y: hidden; */
 }
+
+
+
 
 .product {
    display: flex;
@@ -143,7 +180,7 @@ header .cart span {
 }
 
 .product:hover {
-   border: 3px solid var(--color-primary-green-opacity50);
+   border: 3px solid var(--color-primary-green-opacity);
    border-radius: var(--border-radius-elements);
 }
 
@@ -180,6 +217,7 @@ header .cart span {
    display: grid;
    grid-template-columns: 2fr 1fr;
    gap: 1rem 3rem;
+   margin-bottom: 10px;
 }
 
 .button .btn {
@@ -194,8 +232,8 @@ header .cart span {
    max-width: 250px;
    width: 100%;
    margin: 0 auto;
-   font-size: 1.5rem;
    color: var(--color-white);
+   font-size: 1.3rem;
    font-weight: 600;
 }
 
@@ -206,11 +244,13 @@ header .cart span {
    text-align: center;
    margin-left: -2rem;
    border-radius: var(--border-radius-elements);
+   margin-right: 10px;
 }
 
 .button div a {
    color: var(--color-white);
-   font-weight: 700;
+   font-size: 1.3rem;
+   font-weight: 600;
 }
 
 .button div a :hover{

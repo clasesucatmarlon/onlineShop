@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
-import ListProducts from './components/Products';
+import { BrowserRouter as Router} from 'react-router-dom';
+import  Pages  from './components/Pages';
 
 import './index.css'
 import 'boxicons';
@@ -8,9 +9,12 @@ import 'boxicons';
 function App() {
     return (
         <div className="App">
+            <Router>
+                <Header />
+                {/* <ListProducts /> */}
+                <Pages />
 
-            <Header />
-            <ListProducts />
+            </Router>
         </div>
     );
 }

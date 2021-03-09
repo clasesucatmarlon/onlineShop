@@ -1,5 +1,6 @@
 import boxicons from 'boxicons';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Logo from '../../assets/images/Nike.jpg'
 
@@ -7,18 +8,18 @@ function Header() {
     return (
         <header>
             {/* ***************************************************************  LOGO */}
-            <a href="/#">
+            <Link to="/">
                 <div className="logo">
                     <img src={ Logo } alt="Logo" width="150"/>
                 </div>
-            </a>
+            </Link>
             {/* ***************************************************************  MENU */}
             <ul>
                 <li>
-                    <a href="/#">Home</a>
+                    <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <a href="/#">Products</a>
+                    <Link to="/products">Products</Link>
                 </li>
             </ul>
             {/* ***************************************************************  SHOPPING CART */}
