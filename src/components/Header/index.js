@@ -2,7 +2,7 @@ import boxicons from 'boxicons';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Logo from '../../assets/images/Nike.jpg'
+import Logo from '../../assets/images/logo.png'
 
 function Header() {
     return (
@@ -10,7 +10,7 @@ function Header() {
             {/* ***************************************************************  LOGO */}
             <Link to="/">
                 <div className="logo">
-                    <img src={ Logo } alt="Logo" width="150"/>
+                    <img src={ Logo } alt="Logo" width="100" height="100"/>
                 </div>
             </Link>
             {/* ***************************************************************  MENU */}
