@@ -58,11 +58,11 @@ function Car() {
                 <h2>Your Car</h2>
 
                 {
-                    car.length === 0 ?
-                        <h2
-                            style={{ textAlign: "center", fontSize: "3rem" }}>
-                            Vacío
-                        </h2> : <>
+                    car.length === 0 ? 
+                    <div className="car__empty">
+                        Car empty
+                    </div> :
+                        <>
                             {
                                 car.map(item => (
                                     <div className="car__center" key={item.id}>

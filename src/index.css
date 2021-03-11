@@ -322,6 +322,16 @@ header .cart span {
    visibility: hidden;
 }
 
+.car__empty {
+   font-size: 4.5rem;
+   padding: 8rem;
+   color: var(--color-red);
+   border-bottom: 1px solid var(--color-primary-green-hover);
+   margin: 0 auto;
+   text-align: center;
+   width: 50%;
+}
+
 .car {
    position: fixed;
    top: 50%;
