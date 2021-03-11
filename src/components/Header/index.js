@@ -1,10 +1,22 @@
-import boxicons from 'boxicons';
-import React from 'react';
+/* import boxicons from 'boxicons'; */
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { DataContext } from '../../context/Dataprovider'
 
 import Logo from '../../assets/images/logo.png'
 
 function Header() {
+
+    const value = useContext(DataContext);
+    const [menu, setMenu] = value.menu;
+    const [car] = value.car;
+
+    console.log('Hola: ', menu);
+
+    const toogleMenu = () => {
+        setMenu(!menu)
+    }
+
     return (
         <header>
             {/* ***************************************************************  LOGO */}
@@ -23,9 +35,9 @@ function Header() {
                 </li>
             </ul>
             {/* ***************************************************************  SHOPPING CART */}
-            <div className="cart">
+            <div className="cart" onClick={ toogleMenu }>
                 <box-icon name="cart"></box-icon>
-                <span className="item__total">0</span>
+                <span className="item__total"> { car.length }</span>
             </div>
         </header>
     )
